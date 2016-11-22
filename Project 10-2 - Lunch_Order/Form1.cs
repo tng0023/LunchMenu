@@ -102,7 +102,7 @@ namespace Project_10_2___Lunch_Order
             DialogResult dialogResult = MessageBox.Show("Does this complete your order?", "Confirmation", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show(rtxt_summary.Text + "\n\n" + "Grand Total: " + currentTotal.ToString("c"), "Order Summary");
+                MessageBox.Show(rtxt_summary.Text + "\n\n" + "Amount Due: " + currentTotal.ToString("c"), "Order Summary");
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -156,7 +156,7 @@ namespace Project_10_2___Lunch_Order
             this.Close();
         }
 
-        public void btn_addOrder_Click(object sender, EventArgs e)
+        public void btn_addOrder_Click(object sender, EventArgs e) //adds order to order summary before confirmation
         {
           
             try
@@ -181,7 +181,7 @@ namespace Project_10_2___Lunch_Order
                         rtxt_summary.Text += ("\n" + chk3.Text + " - $.75");
                     }
                     totals();
-                    rtxt_summary.Text += "\n----------------------------\nSubtotal: " + txt_subtotal.Text + "\nTax: " + txt_tax.Text + "\nTotal: " + txt_total.Text + "\nGrand Total: " + currentTotal.ToString("c") + "\n*************************\n";
+                    rtxt_summary.Text += "\n----------------------------\nSubtotal: " + txt_subtotal.Text + "\nTax: " + txt_tax.Text + "\nTotal: " + txt_total.Text + "\nAmount Due: " + currentTotal.ToString("c") + "\n*************************\n";
                     rdb_hamburger.Checked = false;
                     rdb_pizza.Checked = false;
                     rdb_salad.Checked = false;
@@ -209,7 +209,7 @@ namespace Project_10_2___Lunch_Order
                         rtxt_summary.Text += ("\n" + chk3.Text + " - $.50");
                     }
                     totals();
-                    rtxt_summary.Text += "\n----------------------------\nSubtotal: " + txt_subtotal.Text + "\nTax: " + txt_tax.Text + "\nTotal: " + txt_total.Text + "\nGrand Total: " + currentTotal.ToString("c") + "\n*************************\n";
+                    rtxt_summary.Text += "\n----------------------------\nSubtotal: " + txt_subtotal.Text + "\nTax: " + txt_tax.Text + "\nTotal: " + txt_total.Text + "\nAmount Due: " + currentTotal.ToString("c") + "\n*************************\n";
                     rdb_hamburger.Checked = false;
                     rdb_pizza.Checked = false;
                     rdb_salad.Checked = false;
@@ -237,7 +237,7 @@ namespace Project_10_2___Lunch_Order
                         rtxt_summary.Text += ("\n" + chk3.Text + " - $.25");
                     }
                     totals();
-                    rtxt_summary.Text += "\n----------------------------\nSubtotal: " + txt_subtotal.Text + "\nTax: " + txt_tax.Text + "\nTotal: " + txt_total.Text + "\nGrand Total: " + currentTotal.ToString("c") + "\n*************************\n";
+                    rtxt_summary.Text += "\n----------------------------\nSubtotal: " + txt_subtotal.Text + "\nTax: " + txt_tax.Text + "\nTotal: " + txt_total.Text + "\nAmount Due: " + currentTotal.ToString("c") + "\n*************************\n";
                     rdb_hamburger.Checked = false;
                     rdb_pizza.Checked = false;
                     rdb_salad.Checked = false;
