@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.grp_lunch = new System.Windows.Forms.GroupBox();
             this.rdb_salad = new System.Windows.Forms.RadioButton();
             this.rdb_pizza = new System.Windows.Forms.RadioButton();
@@ -73,6 +74,7 @@
             this.rdb_salad.Name = "rdb_salad";
             this.rdb_salad.Size = new System.Drawing.Size(128, 24);
             this.rdb_salad.TabIndex = 3;
+            this.rdb_salad.TabStop = true;
             this.rdb_salad.Tag = "";
             this.rdb_salad.Text = "Salad - $4.95";
             this.rdb_salad.UseVisualStyleBackColor = true;
@@ -83,10 +85,11 @@
             this.rdb_pizza.AutoSize = true;
             this.rdb_pizza.Location = new System.Drawing.Point(7, 73);
             this.rdb_pizza.Name = "rdb_pizza";
-            this.rdb_pizza.Size = new System.Drawing.Size(125, 24);
+            this.rdb_pizza.Size = new System.Drawing.Size(184, 24);
             this.rdb_pizza.TabIndex = 2;
+            this.rdb_pizza.TabStop = true;
             this.rdb_pizza.Tag = "";
-            this.rdb_pizza.Text = "Pizza - $5.95";
+            this.rdb_pizza.Text = "Cheese Pizza - $5.95";
             this.rdb_pizza.UseVisualStyleBackColor = true;
             this.rdb_pizza.CheckedChanged += new System.EventHandler(this.rdb_pizza_CheckedChanged);
             // 
@@ -97,6 +100,7 @@
             this.rdb_hamburger.Name = "rdb_hamburger";
             this.rdb_hamburger.Size = new System.Drawing.Size(167, 24);
             this.rdb_hamburger.TabIndex = 1;
+            this.rdb_hamburger.TabStop = true;
             this.rdb_hamburger.Tag = "";
             this.rdb_hamburger.Text = "Hamburger - $6.95";
             this.rdb_hamburger.UseVisualStyleBackColor = true;
@@ -110,20 +114,18 @@
             this.grp_extras.Location = new System.Drawing.Point(283, 23);
             this.grp_extras.Name = "grp_extras";
             this.grp_extras.Size = new System.Drawing.Size(277, 174);
-            this.grp_extras.TabIndex = 4;
+            this.grp_extras.TabIndex = 1;
             this.grp_extras.TabStop = false;
-            this.grp_extras.Text = "Add on Items";
+            this.grp_extras.Text = "Add-on Items";
             // 
             // chk3
             // 
             this.chk3.AutoSize = true;
             this.chk3.Location = new System.Drawing.Point(7, 119);
             this.chk3.Name = "chk3";
-            this.chk3.Size = new System.Drawing.Size(80, 24);
-            this.chk3.TabIndex = 7;
-            this.chk3.TabStop = false;
+            this.chk3.Size = new System.Drawing.Size(22, 21);
+            this.chk3.TabIndex = 2;
             this.chk3.Tag = "";
-            this.chk3.Text = "Item 3";
             this.chk3.UseVisualStyleBackColor = true;
             // 
             // chk2
@@ -131,11 +133,9 @@
             this.chk2.AutoSize = true;
             this.chk2.Location = new System.Drawing.Point(7, 72);
             this.chk2.Name = "chk2";
-            this.chk2.Size = new System.Drawing.Size(80, 24);
-            this.chk2.TabIndex = 6;
-            this.chk2.TabStop = false;
+            this.chk2.Size = new System.Drawing.Size(22, 21);
+            this.chk2.TabIndex = 1;
             this.chk2.Tag = "";
-            this.chk2.Text = "Item 2";
             this.chk2.UseVisualStyleBackColor = true;
             // 
             // chk1
@@ -143,11 +143,9 @@
             this.chk1.AutoSize = true;
             this.chk1.Location = new System.Drawing.Point(7, 26);
             this.chk1.Name = "chk1";
-            this.chk1.Size = new System.Drawing.Size(80, 24);
-            this.chk1.TabIndex = 5;
-            this.chk1.TabStop = false;
+            this.chk1.Size = new System.Drawing.Size(22, 21);
+            this.chk1.TabIndex = 0;
             this.chk1.Tag = "";
-            this.chk1.Text = "Item 1";
             this.chk1.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -224,9 +222,9 @@
             this.btn_placeOrder.Location = new System.Drawing.Point(20, 283);
             this.btn_placeOrder.Name = "btn_placeOrder";
             this.btn_placeOrder.Size = new System.Drawing.Size(148, 44);
-            this.btn_placeOrder.TabIndex = 10;
+            this.btn_placeOrder.TabIndex = 3;
             this.btn_placeOrder.Tag = "";
-            this.btn_placeOrder.Text = "Place &Order";
+            this.btn_placeOrder.Text = "&Order Checkout";
             this.btn_placeOrder.UseVisualStyleBackColor = true;
             this.btn_placeOrder.Click += new System.EventHandler(this.btn_placeOrder_Click);
             // 
@@ -236,9 +234,9 @@
             this.btn_exit.Location = new System.Drawing.Point(174, 346);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(103, 40);
-            this.btn_exit.TabIndex = 11;
+            this.btn_exit.TabIndex = 5;
             this.btn_exit.Tag = "";
-            this.btn_exit.Text = "E&xit";
+            this.btn_exit.Text = "&Exit";
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
@@ -247,9 +245,9 @@
             this.btn_clear.Location = new System.Drawing.Point(20, 346);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(148, 39);
-            this.btn_clear.TabIndex = 9;
+            this.btn_clear.TabIndex = 4;
             this.btn_clear.Tag = "";
-            this.btn_clear.Text = "&Clear";
+            this.btn_clear.Text = "&Clear Entire Order";
             this.btn_clear.UseVisualStyleBackColor = true;
             this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
@@ -269,7 +267,7 @@
             this.btn_addOrder.Location = new System.Drawing.Point(20, 220);
             this.btn_addOrder.Name = "btn_addOrder";
             this.btn_addOrder.Size = new System.Drawing.Size(148, 43);
-            this.btn_addOrder.TabIndex = 8;
+            this.btn_addOrder.TabIndex = 2;
             this.btn_addOrder.Tag = "";
             this.btn_addOrder.Text = "&Add Order";
             this.btn_addOrder.UseVisualStyleBackColor = true;
@@ -289,6 +287,7 @@
             this.AcceptButton = this.btn_placeOrder;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.CancelButton = this.btn_exit;
             this.ClientSize = new System.Drawing.Size(979, 404);
             this.Controls.Add(this.label4);
@@ -300,6 +299,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.grp_extras);
             this.Controls.Add(this.grp_lunch);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Lunch Order";
             this.grp_lunch.ResumeLayout(false);
