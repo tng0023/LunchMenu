@@ -50,6 +50,7 @@
             this.rtxt_summary = new System.Windows.Forms.RichTextBox();
             this.btn_addOrder = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.grp_lunch.SuspendLayout();
             this.grp_extras.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -72,11 +73,10 @@
             this.rdb_salad.AutoSize = true;
             this.rdb_salad.Location = new System.Drawing.Point(7, 119);
             this.rdb_salad.Name = "rdb_salad";
-            this.rdb_salad.Size = new System.Drawing.Size(128, 24);
+            this.rdb_salad.Size = new System.Drawing.Size(159, 24);
             this.rdb_salad.TabIndex = 3;
-            this.rdb_salad.TabStop = true;
             this.rdb_salad.Tag = "";
-            this.rdb_salad.Text = "Salad - $4.95";
+            this.rdb_salad.Text = "Fried Rice - $4.95";
             this.rdb_salad.UseVisualStyleBackColor = true;
             this.rdb_salad.CheckedChanged += new System.EventHandler(this.rdb_salad_CheckedChanged);
             // 
@@ -85,11 +85,10 @@
             this.rdb_pizza.AutoSize = true;
             this.rdb_pizza.Location = new System.Drawing.Point(7, 73);
             this.rdb_pizza.Name = "rdb_pizza";
-            this.rdb_pizza.Size = new System.Drawing.Size(184, 24);
+            this.rdb_pizza.Size = new System.Drawing.Size(165, 24);
             this.rdb_pizza.TabIndex = 2;
-            this.rdb_pizza.TabStop = true;
             this.rdb_pizza.Tag = "";
-            this.rdb_pizza.Text = "Cheese Pizza - $5.95";
+            this.rdb_pizza.Text = "Chow Mein - $5.95";
             this.rdb_pizza.UseVisualStyleBackColor = true;
             this.rdb_pizza.CheckedChanged += new System.EventHandler(this.rdb_pizza_CheckedChanged);
             // 
@@ -98,11 +97,10 @@
             this.rdb_hamburger.AutoSize = true;
             this.rdb_hamburger.Location = new System.Drawing.Point(7, 26);
             this.rdb_hamburger.Name = "rdb_hamburger";
-            this.rdb_hamburger.Size = new System.Drawing.Size(167, 24);
+            this.rdb_hamburger.Size = new System.Drawing.Size(143, 24);
             this.rdb_hamburger.TabIndex = 1;
-            this.rdb_hamburger.TabStop = true;
             this.rdb_hamburger.Tag = "";
-            this.rdb_hamburger.Text = "Hamburger - $6.95";
+            this.rdb_hamburger.Text = "Lo Mein - $6.95";
             this.rdb_hamburger.UseVisualStyleBackColor = true;
             this.rdb_hamburger.CheckedChanged += new System.EventHandler(this.rdb_hamburger_CheckedChanged);
             // 
@@ -278,9 +276,18 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(593, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 20);
+            this.label4.Size = new System.Drawing.Size(135, 20);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Order Summary";
+            this.label4.Text = "Receipt Summary";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(182, 20);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Tommy Ng - Project 10-2";
             // 
             // Form1
             // 
@@ -290,6 +297,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.CancelButton = this.btn_exit;
             this.ClientSize = new System.Drawing.Size(979, 404);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_addOrder);
             this.Controls.Add(this.rtxt_summary);
@@ -300,8 +308,10 @@
             this.Controls.Add(this.grp_extras);
             this.Controls.Add(this.grp_lunch);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Lunch Order";
+            this.Text = "Asia Chow Mein";
             this.grp_lunch.ResumeLayout(false);
             this.grp_lunch.PerformLayout();
             this.grp_extras.ResumeLayout(false);
@@ -336,6 +346,7 @@
         private System.Windows.Forms.RichTextBox rtxt_summary;
         private System.Windows.Forms.Button btn_addOrder;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

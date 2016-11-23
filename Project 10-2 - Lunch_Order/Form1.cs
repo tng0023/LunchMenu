@@ -35,36 +35,43 @@ namespace Project_10_2___Lunch_Order
         }
         private void btn_clear_Click(object sender, EventArgs e) //clears all radio buttons, checkboxes and textboxes
         {
-            subtotal = 0;
-            tax = 0;
-            total = 0;
-            currentTotal = 0;
-            counter = 1;
-            txt_subtotal.Text = "";
-            txt_tax.Text = "";
-            txt_total.Text = "";
-            rdb_hamburger.Checked = false;
-            rdb_pizza.Checked = false;
-            rdb_salad.Checked = false;
-            rtxt_summary.Text = "";
-            foreach (Control control in grp_extras.Controls)
+            if (rtxt_summary.Text == "")
             {
-                if (control.GetType() == typeof(CheckBox))
+                MessageBox.Show("There are no orders to clear!", "Error");
+            }
+            else
+            {
+                subtotal = 0;
+                tax = 0;
+                total = 0;
+                currentTotal = 0;
+                counter = 1;
+                txt_subtotal.Text = "";
+                txt_tax.Text = "";
+                txt_total.Text = "";
+                rdb_hamburger.Checked = false;
+                rdb_pizza.Checked = false;
+                rdb_salad.Checked = false;
+                rtxt_summary.Text = "";
+                foreach (Control control in grp_extras.Controls)
                 {
-                    ((CheckBox)control).Checked = false;
-                }
-                foreach (Control control1 in grp_extras.Controls)
-                {
-                    if (control1.GetType() == typeof(CheckBox))
+                    if (control.GetType() == typeof(CheckBox))
                     {
-                        ((CheckBox)control1).Checked = false;
+                        ((CheckBox)control).Checked = false;
                     }
-                }
-                foreach (Control control2 in grp_extras.Controls)
-                {
-                    if (control2.GetType() == typeof(CheckBox))
+                    foreach (Control control1 in grp_extras.Controls)
                     {
-                        ((CheckBox)control2).Checked = false;
+                        if (control1.GetType() == typeof(CheckBox))
+                        {
+                            ((CheckBox)control1).Checked = false;
+                        }
+                    }
+                    foreach (Control control2 in grp_extras.Controls)
+                    {
+                        if (control2.GetType() == typeof(CheckBox))
+                        {
+                            ((CheckBox)control2).Checked = false;
+                        }
                     }
                 }
             }
@@ -98,7 +105,7 @@ namespace Project_10_2___Lunch_Order
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to checkout?", "Confirmation", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show(rtxt_summary.Text + "\n\n" + "Amount Due: " + currentTotal.ToString("c"), "Order Summary");
+                MessageBox.Show(rtxt_summary.Text + "\n\n" + "Amount Due: " + currentTotal.ToString("c"), "Order Receipt");
                 
             }
             else if (dialogResult == DialogResult.No)
@@ -120,9 +127,9 @@ namespace Project_10_2___Lunch_Order
             {
                 clearC();
                 grp_extras.Text = ("Add-on items($.50/each)");
-                chk1.Text = ("Pepperoni");
-                chk2.Text = ("Sausage");
-                chk3.Text = ("Olives");
+                chk1.Text = ("Pork");
+                chk2.Text = ("Chicken");
+                chk3.Text = ("Special");
             }
         }
         private void rdb_salad_CheckedChanged(object sender, EventArgs e) //updates additional salad items
@@ -131,9 +138,9 @@ namespace Project_10_2___Lunch_Order
             {
                 clearC();
                 grp_extras.Text = ("Add-on items($.25/each)");
-                chk1.Text = ("Croutons");
-                chk2.Text = ("Bacon bits");
-                chk3.Text = ("Bread Sticks");
+                chk1.Text = ("BBQ Pork");
+                chk2.Text = ("Beef");
+                chk3.Text = ("Special");
             }
         }
 
@@ -143,9 +150,9 @@ namespace Project_10_2___Lunch_Order
             {
                 clearC();
                 grp_extras.Text = ("Add-on items($.75/each)");
-                chk1.Text = ("Lettuce, tomato, onions");
-                chk2.Text = ("Mayonnaise and mustard");
-                chk3.Text = ("French fries");
+                chk1.Text = ("Chicken");
+                chk2.Text = ("Beef");
+                chk3.Text = ("Special");
             }
         }
         private void btn_exit_Click(object sender, EventArgs e) //exits the lunch program
